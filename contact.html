@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+<title>Contact | Shilp Associates</title>
+<meta name="description" content="Get in touch with Shilp Associates to discuss your architecture, liaison, PMC or interior design project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="assets/styles.css">
+<style>:root{ --page-hero-img: url('assets/hero-bg.png'); }</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="site-logo"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a>
+    <nav class="main-nav" aria-label="Main Menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="liaison.html">Liaison</a></li>
+        <li><a href="pmc.html">PMC</a></li>
+        <li><a href="architectural-design.html">Architectural Design</a></li>
+        <li><a href="interior-design.html">Interior Design</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="header-cta">Book a Consultation</a>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div>
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Let's Talk About Your Project</h1>
+    <p>Whether it's a redevelopment, a new build, or an interior fit-out — tell us what you're planning.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+  </div>
+</section>
+
+<section class="content-section reveal">
+  <div class="wrap contact-wrap">
+    <div>
+      <span class="eyebrow-sm">Contact Details</span>
+      <h2 class="h2 h2--sub">Reach Out to Shilp Associates</h2>
+
+      <div class="contact-info-item">
+        <i class="fa-solid fa-user-tie"></i>
+        <div>
+          <h4>Founder</h4>
+          <a href="https://www.linkedin.com/in/nikhil-dikshit-53994839/" target="_blank" rel="noopener">Nikhil Dikshit — LinkedIn</a>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-diagram-project"></i>
+        <div>
+          <h4>Services</h4>
+          <p>Liaison · PMC · Architectural Design · Interior Design</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>Serving</h4>
+          <p>Mumbai &amp; Pune</p>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Response Time</h4>
+          <p>We typically respond to consultation requests within 1–2 business days.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <span class="eyebrow-sm">Book a Consultation</span>
+      <h2 class="h2 h2--sub">Send Us a Message</h2>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this form is a static preview and is not yet connected. Please share your email/phone hookup details to enable submissions.');">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option>Liaison Services</option>
+            <option>Project Management Consultancy (PMC)</option>
+            <option>Architectural Design</option>
+            <option>Interior Design</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Enquiry <span class="btn-arrow">→</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-logo"><a href="index.html"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a></div>
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="liaison.html">Liaison</a></li>
+      <li><a href="pmc.html">PMC</a></li>
+      <li><a href="architectural-design.html">Architectural Design</a></li>
+      <li><a href="interior-design.html">Interior Design</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Career</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="footer-bottom"><p>© 2026 Shilp Associates. All Rights Reserved.</p></div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
