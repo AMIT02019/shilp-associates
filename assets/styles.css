@@ -821,7 +821,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff;
   border: 1px solid var(--clr-border);
   border-radius: 4px;
-  padding: 32px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -833,6 +833,27 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-5px);
   border-color: var(--color-navy);
   box-shadow: 0 16px 40px rgba(15, 34, 54, 0.08);
+}
+
+.bento-img-wrapper {
+  width: 100%;
+  height: 190px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: var(--color-navy-dark);
+}
+.bento-card--large .bento-img-wrapper {
+  height: 240px;
+}
+.bento-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover .bento-img {
+  transform: scale(1.06);
 }
 
 .bento-card--large {
