@@ -345,37 +345,50 @@ h1, h2, h3, h4, h5, h6 {
 .lightbox-close:hover { opacity: 1; }
 
 /* ==========================================================================
-   CLIENTS MARQUEE (Dual Opposite Direction Scrolling Tickers)
+   CLIENTS MARQUEE (Off-White Canvas with Square White Cards)
    ========================================================================== */
-.clients-section { padding: 80px 0; text-align: center; overflow: hidden; background: var(--color-white); }
-.clients-section .h2 { margin-bottom: 32px; }
+.clients-section {
+  padding: 88px 0;
+  text-align: center;
+  overflow: hidden;
+  background: #f4f6f8;
+}
+
+.clients-section .h2 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 36px;
+}
 
 .logo-marquee-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 16px 0;
 }
+
 .logo-marquee-container::before,
 .logo-marquee-container::after {
   content: '';
   position: absolute;
   top: 0;
-  width: 160px;
+  width: 180px;
   height: 100%;
   z-index: 5;
   pointer-events: none;
 }
 .logo-marquee-container::before {
   left: 0;
-  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, #f4f6f8 0%, rgba(244, 246, 248, 0) 100%);
 }
 .logo-marquee-container::after {
   right: 0;
-  background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to left, #f4f6f8 0%, rgba(244, 246, 248, 0) 100%);
 }
 
 .logo-marquee-row {
@@ -386,45 +399,52 @@ h1, h2, h3, h4, h5, h6 {
 
 .marquee-track {
   display: flex;
-  gap: 48px;
+  gap: 32px;
   width: max-content;
   align-items: center;
   will-change: transform;
 }
 
-/* Row 1: Leftward Scroll */
-.marquee-track-left {
-  animation: marquee-left 25s linear infinite;
+.marquee-card-box {
+  width: 135px;
+  height: 135px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  flex-shrink: 0;
 }
 
-/* Row 2: Rightward Scroll (Opposite) */
+.marquee-card-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(15, 34, 54, 0.12);
+}
+
+.marquee-card-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Row 1: Leftward Scroll */
+.marquee-track-left {
+  animation: marquee-left 28s linear infinite;
+}
+
+/* Row 2: Rightward Scroll (Opposite Direction) */
 .marquee-track-right {
-  animation: marquee-right 25s linear infinite;
+  animation: marquee-right 28s linear infinite;
 }
 
 /* Hover Pause Effect */
 .logo-marquee-row:hover .marquee-track {
   animation-play-state: paused;
-}
-
-.marquee-track img {
-  height: 65px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(0.1);
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  padding: 8px 16px;
-  background: #ffffff;
-  border: 1px solid var(--clr-border);
-  border-radius: 4px;
-}
-.marquee-track img:hover {
-  filter: grayscale(0);
-  opacity: 1;
-  transform: translateY(-3px) scale(1.05);
-  border-color: var(--color-navy);
-  box-shadow: var(--shadow-sm);
 }
 
 @keyframes marquee-left {
