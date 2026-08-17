@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
 
 /* ==========================================================================
-   SHILP ASSOCIATES — DESIGN TOKENS (Matched to live brand system)
-   Reference: https://mediumorchid-oryx-889489.hostingersite.com/
+   SHILP ASSOCIATES — DESIGN TOKENS
    ========================================================================== */
 :root {
   --Blue: #1F4160;
@@ -16,7 +15,7 @@
   --clr-muted: #607289;
   --clr-border: #E2E2E2;
   --clr-bg-alt: #F8F6F2;
-  --font-heading: 'Montserrat', sans-serif;
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Roboto', sans-serif;
   --container-max: 1400px;
   --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.04);
