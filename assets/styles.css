@@ -608,3 +608,57 @@ h1, h2, h3, h4, h5, h6 {
   .main-nav.mobile-open ul { flex-direction: column; gap: 18px; }
   .site-header { position: sticky; }
 }
+
+/* ==========================================================================
+   ADVANCED ON-SCROLL ANIMATIONS & EFFECTS
+   ========================================================================== */
+.site-header {
+  transition: background-color .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+.site-header.is-scrolled {
+  background: rgba(15, 34, 54, 0.98) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(245, 179, 53, 0.25);
+}
+
+/* Scroll Reveal Triggers */
+.reveal, .reveal-up, .reveal-scale, .reveal-left, .reveal-right {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal, .reveal-up {
+  transform: translateY(35px);
+}
+
+.reveal-scale {
+  transform: scale(0.93) translateY(20px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+/* Active State Triggered by IntersectionObserver */
+.reveal.is-visible,
+.reveal-up.is-visible,
+.reveal-scale.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) translateX(0);
+}
+
+/* Stagger Delays for Grid Children */
+.stagger-item:nth-child(1) { transition-delay: 0.05s; }
+.stagger-item:nth-child(2) { transition-delay: 0.15s; }
+.stagger-item:nth-child(3) { transition-delay: 0.25s; }
+.stagger-item:nth-child(4) { transition-delay: 0.35s; }
+.stagger-item:nth-child(5) { transition-delay: 0.45s; }
+.stagger-item:nth-child(6) { transition-delay: 0.55s; }
+

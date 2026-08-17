@@ -21,13 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.3 });
   counters.forEach(c => counterObserver.observe(c));
 
-  // Scroll reveal
+  // Scroll reveal with multiple animation classes
+  const revealElements = document.querySelectorAll(".reveal, .reveal-up, .reveal-scale, .reveal-left, .reveal-right");
   const revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+      if (entry.isIntersecting) { 
+        entry.target.classList.add("is-visible"); 
+        obs.unobserve(entry.target); 
+      }
     });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  }, { threshold: 0.12 });
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Header scroll shadow / backdrop effect
+  const siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    const handleScroll = () => {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 25);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+  }
 
   // Lightbox
   const lightbox = document.getElementById("siteLightbox");
