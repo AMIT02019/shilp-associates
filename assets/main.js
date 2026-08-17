@@ -33,11 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.12 });
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Header scroll shadow / backdrop effect
+  // Header scroll direction handler (Scroll Down = Appear, Scroll Up = Hide)
   const siteHeader = document.querySelector(".site-header");
   if (siteHeader) {
+    let lastScrollY = window.scrollY;
     const handleScroll = () => {
-      siteHeader.classList.toggle("is-scrolled", window.scrollY > 25);
+      const currentScrollY = window.scrollY;
+      if (currentScrollY <= 20) {
+        siteHeader.classList.remove("header-hidden");
+        siteHeader.classList.add("header-visible");
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling DOWN -> Header APPEARS
+        siteHeader.classList.remove("header-hidden");
+        siteHeader.classList.add("header-visible");
+      } else {
+        // Scrolling UP -> Header HIDES
+        siteHeader.classList.remove("header-visible");
+        siteHeader.classList.add("header-hidden");
+      }
+      lastScrollY = currentScrollY;
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();

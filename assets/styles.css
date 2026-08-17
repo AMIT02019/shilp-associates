@@ -79,16 +79,21 @@ h1, h2, h3, h4, h5, h6 {
    HEADER / NAV
    ========================================================================== */
 .site-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  position: fixed; top: 14px; left: 0; right: 0; z-index: 1000;
+  width: min(92%, 1380px); margin: 0 auto;
+  border-radius: 50px;
   background: rgba(15, 34, 54, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(245, 179, 53, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(245, 179, 53, 0.12);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+  will-change: transform, opacity;
 }
 .site-header .wrap {
   display: flex; align-items: center; justify-content: space-between;
-  padding-block: 14px;
+  padding-block: 10px;
+  padding-inline: 28px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .site-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); transition: opacity .25s ease; }
@@ -111,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--color-gold); color: var(--color-charcoal);
   font-family: var(--font-heading); font-weight: 600; font-size: 0.85rem;
-  text-decoration: none; padding: 12px 22px; border-radius: 2px;
+  text-decoration: none; padding: 10px 22px; border-radius: 30px;
   letter-spacing: 0.02em;
   transition: all .3s ease;
 }
@@ -691,24 +696,15 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    ADVANCED ON-SCROLL ANIMATIONS & EFFECTS
    ========================================================================== */
-.site-header.is-scrolled {
-  top: 14px;
-  width: min(92%, 1340px);
-  margin: 0 auto;
-  border-radius: 50px;
-  background: rgba(15, 34, 54, 0.78) !important;
-  backdrop-filter: blur(20px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-  border: 1px solid rgba(245, 179, 53, 0.35) !important;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(245, 179, 53, 0.12) !important;
+.site-header.header-hidden {
+  transform: translateY(-140%);
+  opacity: 0;
+  pointer-events: none;
 }
-.site-header.is-scrolled .wrap {
-  padding-block: 10px;
-  padding-inline: 28px;
-}
-.site-header.is-scrolled .header-cta {
-  border-radius: 30px;
-  padding: 10px 20px;
+.site-header.header-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Scroll Reveal Triggers */
