@@ -111,6 +111,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Pune Bento Region Filters
+  const puneBtns = document.querySelectorAll(".pune-filter-btn");
+  if (puneBtns.length) {
+    const bentoCards = document.querySelectorAll(".bento-card");
+    puneBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        puneBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const region = btn.getAttribute("data-region");
+        bentoCards.forEach(card => {
+          const show = region === "all" || card.getAttribute("data-region") === region;
+          card.classList.toggle("hidden", !show);
+        });
+      });
+    });
+  }
+
   // Mobile nav toggle
   const navToggle = document.querySelector(".nav-toggle");
   const mainNav = document.querySelector(".main-nav");
