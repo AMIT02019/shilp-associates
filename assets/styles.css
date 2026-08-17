@@ -79,15 +79,17 @@ h1, h2, h3, h4, h5, h6 {
    HEADER / NAV
    ========================================================================== */
 .site-header {
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(15, 34, 54, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(15, 34, 54, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .site-header .wrap {
   display: flex; align-items: center; justify-content: space-between;
   padding-block: 14px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .site-logo img { height: 44px; width: auto; filter: brightness(0) invert(1); transition: opacity .25s ease; }
 .site-logo img:hover { opacity: 0.9; }
@@ -689,13 +691,24 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    ADVANCED ON-SCROLL ANIMATIONS & EFFECTS
    ========================================================================== */
-.site-header {
-  transition: background-color .35s ease, box-shadow .35s ease, border-color .35s ease;
-}
 .site-header.is-scrolled {
-  background: rgba(15, 34, 54, 0.98) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-  border-bottom-color: rgba(245, 179, 53, 0.25);
+  top: 14px;
+  width: min(92%, 1340px);
+  margin: 0 auto;
+  border-radius: 50px;
+  background: rgba(15, 34, 54, 0.78) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border: 1px solid rgba(245, 179, 53, 0.35) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(245, 179, 53, 0.12) !important;
+}
+.site-header.is-scrolled .wrap {
+  padding-block: 10px;
+  padding-inline: 28px;
+}
+.site-header.is-scrolled .header-cta {
+  border-radius: 30px;
+  padding: 10px 20px;
 }
 
 /* Scroll Reveal Triggers */
