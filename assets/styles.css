@@ -330,20 +330,97 @@ h1, h2, h3, h4, h5, h6 {
 .lightbox-close:hover { opacity: 1; }
 
 /* ==========================================================================
-   CLIENTS MARQUEE
+   CLIENTS MARQUEE (Dual Opposite Direction Scrolling Tickers)
    ========================================================================== */
-.clients-section { padding: 96px 0 0; text-align: center; }
-.clients-section .h2 { margin-bottom: 0; }
-.logo-marquee-wrapper { width: 100%; overflow: hidden; position: relative; padding: 60px 0; }
-.logo-marquee-wrapper::before, .logo-marquee-wrapper::after {
-  content: ''; position: absolute; top: 0; width: 120px; height: 100%; z-index: 2; pointer-events: none;
+.clients-section { padding: 80px 0; text-align: center; overflow: hidden; background: var(--color-white); }
+.clients-section .h2 { margin-bottom: 32px; }
+
+.logo-marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
 }
-.logo-marquee-wrapper::before { left: 0; background: linear-gradient(to right,var(--Off-White),transparent); }
-.logo-marquee-wrapper::after { right: 0; background: linear-gradient(to left,var(--Off-White),transparent); }
-.marquee-track { display: flex; gap: 80px; animation: marquee-scroll 25s linear infinite; width: max-content; align-items: center; }
-.marquee-track img { height: 90px; width: auto; object-fit: contain; filter: grayscale(0.2); transition: filter .3s ease, transform .3s ease; }
-.marquee-track img:hover { filter: grayscale(0); transform: scale(1.1); }
-@keyframes marquee-scroll { from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+.logo-marquee-container::before,
+.logo-marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+.logo-marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+.logo-marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-marquee-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+  align-items: center;
+  will-change: transform;
+}
+
+/* Row 1: Leftward Scroll */
+.marquee-track-left {
+  animation: marquee-left 25s linear infinite;
+}
+
+/* Row 2: Rightward Scroll (Opposite) */
+.marquee-track-right {
+  animation: marquee-right 25s linear infinite;
+}
+
+/* Hover Pause Effect */
+.logo-marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track img {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0.1);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid var(--clr-border);
+  border-radius: 4px;
+}
+.marquee-track img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: translateY(-3px) scale(1.05);
+  border-color: var(--color-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
 
 /* ==========================================================================
    TESTIMONIALS
