@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .h1 {
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
   color: var(--color-white);
   letter-spacing: -0.3px;
@@ -691,7 +691,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 140px 32px 72px;
 }
 .page-hero .eyebrow { font-family: var(--font-heading); color: var(--color-gold); text-transform: uppercase; letter-spacing: 3px; font-size: .85rem; font-weight: 700; margin-bottom: 16px; }
-.page-hero h1 { font-family: var(--font-heading); font-weight: 500; font-size: clamp(2.2rem,4vw + 1rem,3.75rem); color: #fff; line-height: 1.15; max-width: 900px; margin: 0 auto; }
+.page-hero h1 { font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.2rem,4vw + 1rem,3.75rem); color: #fff; line-height: 1.15; max-width: 900px; margin: 0 auto; }
 .page-hero p { color: rgba(255,255,255,.82); font-family: var(--font-body); font-size: 1.15rem; max-width: 640px; margin: 20px auto 0; }
 .breadcrumb { font-size: .85rem; color: rgba(255,255,255,.6); margin-top: 18px; font-family: var(--font-heading); letter-spacing: .03em; }
 .breadcrumb a { color: rgba(255,255,255,.85); text-decoration: none; }
