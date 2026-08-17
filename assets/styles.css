@@ -83,11 +83,11 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed; top: 16px; left: 0; right: 0; z-index: 1000;
   width: min(92%, 1380px); margin: 0 auto;
   border-radius: 50px;
-  background: rgba(35, 95, 155, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.30);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  background: rgba(31, 65, 96, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, background 0.35s ease;
   will-change: transform, opacity;
   overflow: hidden;
