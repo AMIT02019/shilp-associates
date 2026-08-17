@@ -33,23 +33,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.12 });
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // Header scroll direction handler (Scroll Down = Appear, Scroll Up = Hide)
+  // Header scroll direction handler (Scroll UP = Appear, Scroll DOWN = Hide)
   const siteHeader = document.querySelector(".site-header");
   if (siteHeader) {
     let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY <= 20) {
+        // At top of page -> Show header
         siteHeader.classList.remove("header-hidden");
         siteHeader.classList.add("header-visible");
-      } else if (currentScrollY > lastScrollY) {
-        // Scrolling DOWN -> Header APPEARS
-        siteHeader.classList.remove("header-hidden");
-        siteHeader.classList.add("header-visible");
-      } else {
-        // Scrolling UP -> Header HIDES
+      } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling DOWN -> HIDE header
         siteHeader.classList.remove("header-visible");
         siteHeader.classList.add("header-hidden");
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling UP -> APPEAR header
+        siteHeader.classList.remove("header-hidden");
+        siteHeader.classList.add("header-visible");
       }
       lastScrollY = currentScrollY;
     };
