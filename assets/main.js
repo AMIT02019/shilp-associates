@@ -40,15 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY <= 20) {
-        // At top of page -> Show header
         siteHeader.classList.remove("header-hidden");
         siteHeader.classList.add("header-visible");
-      } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
-        // Scrolling DOWN -> HIDE header
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
         siteHeader.classList.remove("header-visible");
         siteHeader.classList.add("header-hidden");
       } else if (currentScrollY < lastScrollY) {
-        // Scrolling UP -> APPEAR header
         siteHeader.classList.remove("header-hidden");
         siteHeader.classList.add("header-visible");
       }
@@ -57,6 +54,40 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
   }
+
+  // Header Navigation & Dropdowns Handler
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      navToggle.classList.toggle("is-active");
+      mainNav.classList.toggle("mobile-open");
+      document.body.classList.toggle("nav-locked");
+    });
+  }
+
+  // Dropdown toggle buttons on mobile & touch devices
+  document.querySelectorAll(".dropdown-trigger-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parentLi = btn.closest(".has-dropdown");
+      if (parentLi) {
+        const wasOpen = parentLi.classList.contains("is-open");
+        document.querySelectorAll(".has-dropdown").forEach(item => {
+          if (item !== parentLi) item.classList.remove("is-open");
+        });
+        parentLi.classList.toggle("is-open", !wasOpen);
+      }
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".has-dropdown")) {
+      document.querySelectorAll(".has-dropdown").forEach(item => item.classList.remove("is-open"));
+    }
+  });
 
   // Lightbox
   const lightbox = document.getElementById("siteLightbox");
@@ -95,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       track.style.transform = `translate3d(-${currentIndex * 100}%,0,0)`;
       dots.forEach((d,i) => d.classList.toggle("active", i === currentIndex));
     }
-    nextBtn.addEventListener("click", () => { currentIndex = (currentIndex+1) % slides.length; updateSlider(); });
+    if (nextBtn) nextBtn.addEventListener("click", () => { currentIndex = (currentIndex+1) % slides.length; updateSlider(); });
     setInterval(() => { currentIndex = (currentIndex+1) % slides.length; updateSlider(); }, 6000);
   }
 
@@ -140,15 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
           card.classList.toggle("hidden", !show);
         });
       });
-    });
-  }
-
-  // Mobile nav toggle
-  const navToggle = document.querySelector(".nav-toggle");
-  const mainNav = document.querySelector(".main-nav");
-  if (navToggle && mainNav) {
-    navToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("mobile-open");
     });
   }
 });

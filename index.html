@@ -20,10 +20,13 @@
       <img src="assets/logo-shilp.png" alt="Shilp Associates">
     </a>
     <nav class="main-nav" aria-label="Main Navigation">
-      <ul>
+      <ul class="nav-list">
         <li><a href="index.html" class="active">Home</a></li>
         <li class="has-dropdown">
-          <a href="about.html">About Us <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <div class="nav-item-link-wrap">
+            <a href="about.html" class="">About Us</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle About Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
           <ul class="dropdown-menu">
             <li><a href="about.html">Our Legacy</a></li>
             <li><a href="about.html#team">Leadership &amp; Team</a></li>
@@ -31,7 +34,10 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a href="#services">Services <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <div class="nav-item-link-wrap">
+            <a href="architectural-design.html" class="">Services</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle Services Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
           <ul class="dropdown-menu">
             <li><a href="architectural-design.html">Architectural Design</a></li>
             <li><a href="liaison.html">Liaison Services</a></li>
@@ -40,7 +46,10 @@
           </ul>
         </li>
         <li class="has-dropdown">
-          <a href="portfolio.html">Projects <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <div class="nav-item-link-wrap">
+            <a href="portfolio.html" class="">Projects</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle Projects Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
           <ul class="dropdown-menu">
             <li><a href="portfolio.html">All Projects</a></li>
             <li><a href="architectural-design.html#residential">Residential</a></li>
@@ -49,9 +58,8 @@
             <li><a href="liaison.html#approvals">Government Liaison</a></li>
           </ul>
         </li>
-        <li><a href="pune.html">Pune</a></li>
-        <li><a href="#insights">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pune.html" class="">Pune</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
       </ul>
     </nav>
     <div class="header-right-actions">

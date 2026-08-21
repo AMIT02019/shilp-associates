@@ -13,23 +13,58 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="masthead">
   <div class="wrap">
-    <a href="index.html" class="site-logo"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a>
-    <nav class="main-nav" aria-label="Main Menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="pune.html">Pune</a></li>
-        <li><a href="liaison.html">Liaison</a></li>
-        <li><a href="pmc.html">PMC</a></li>
-        <li><a href="architectural-design.html">Architectural Design</a></li>
-        <li><a href="interior-design.html">Interior Design</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <a href="index.html" class="site-logo" aria-label="Shilp Associates Home">
+      <img src="assets/logo-shilp.png" alt="Shilp Associates">
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        <li><a href="index.html" class="">Home</a></li>
+        <li class="has-dropdown">
+          <div class="nav-item-link-wrap">
+            <a href="about.html" class="">About Us</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle About Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">Our Legacy</a></li>
+            <li><a href="about.html#team">Leadership &amp; Team</a></li>
+            <li><a href="pune.html">Pune Office</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <div class="nav-item-link-wrap">
+            <a href="architectural-design.html" class="">Services</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle Services Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="architectural-design.html">Architectural Design</a></li>
+            <li><a href="liaison.html">Liaison Services</a></li>
+            <li><a href="pmc.html">Project Management (PMC)</a></li>
+            <li><a href="interior-design.html">Interior Design</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <div class="nav-item-link-wrap">
+            <a href="portfolio.html" class="active">Projects</a>
+            <button class="dropdown-trigger-btn" aria-label="Toggle Projects Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="portfolio.html">All Projects</a></li>
+            <li><a href="architectural-design.html#residential">Residential</a></li>
+            <li><a href="architectural-design.html#commercial">Commercial</a></li>
+            <li><a href="pmc.html#projects">PMC Landmarks</a></li>
+            <li><a href="liaison.html#approvals">Government Liaison</a></li>
+          </ul>
+        </li>
+        <li><a href="pune.html" class="">Pune</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
       </ul>
     </nav>
-    <a href="contact.html" class="header-cta">Book a Consultation</a>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="header-right-actions">
+      <a href="contact.html" class="header-cta">Book a Consultation</a>
+      <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
