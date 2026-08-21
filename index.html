@@ -3,39 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
-<title>Shilp Associates | Designing Spaces. Building Trust. Shaping Tomorrow.</title>
-<meta name="description" content="Shilp Associates — 40+ Years of Excellence in Architecture, Liaison and Project Management Consultancy across Mumbai & Pune.">
+<title>Shilp Associates | Strategic Architectural Design, Liaisoning, PMC & Interior Design</title>
+<meta name="description" content="Explore innovative architectural solutions at Shilp Associates. 40+ Years of Excellence in Architectural Design, Liaisoning, Project Management (PMC), and Interior Design across Mumbai & Pune.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<!-- ============================== HEADER ============================== -->
-<header class="site-header">
+<!-- ============================== HEADER (DAISARIA STYLE) ============================== -->
+<header class="site-header" id="masthead">
   <div class="wrap">
-    <a href="index.html" class="site-logo"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a>
-    <nav class="main-nav" aria-label="Main Menu">
+    <a href="index.html" class="site-logo" aria-label="Shilp Associates Home">
+      <img src="assets/logo-shilp.png" alt="Shilp Associates">
+    </a>
+    <nav class="main-nav" aria-label="Main Navigation">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="about.html">About Us <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">Our Legacy</a></li>
+            <li><a href="about.html#team">Leadership &amp; Team</a></li>
+            <li><a href="pune.html">Pune Office</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#services">Services <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="architectural-design.html">Architectural Design</a></li>
+            <li><a href="liaison.html">Liaison Services</a></li>
+            <li><a href="pmc.html">Project Management (PMC)</a></li>
+            <li><a href="interior-design.html">Interior Design</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="portfolio.html">Projects <i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="portfolio.html">All Projects</a></li>
+            <li><a href="architectural-design.html#residential">Residential</a></li>
+            <li><a href="architectural-design.html#commercial">Commercial</a></li>
+            <li><a href="pmc.html#projects">PMC Landmarks</a></li>
+            <li><a href="liaison.html#approvals">Government Liaison</a></li>
+          </ul>
+        </li>
         <li><a href="pune.html">Pune</a></li>
-        <li><a href="liaison.html">Liaison</a></li>
-        <li><a href="pmc.html">PMC</a></li>
-        <li><a href="architectural-design.html">Architectural Design</a></li>
-        <li><a href="interior-design.html">Interior Design</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#insights">Media</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <a href="contact.html" class="header-cta">Book a Consultation</a>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="header-right-actions">
+      <a href="contact.html" class="header-cta">Book a Consultation</a>
+      <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
-<!-- ============================== HERO ============================== -->
-<section class="hero">
-  <!-- Autoplay Background Video -->
+<!-- ============================== HERO (ARCHITECTURAL STATEMENTS) ============================== -->
+<section class="hero" id="hero">
+  <!-- Autoplay Video Background -->
   <div class="hero-video-bg">
     <video autoplay loop muted playsinline poster="assets/hero-bg.png" class="hero-video-element">
       <source src="assets/hero-bg.mp4" type="video/mp4">
@@ -43,42 +71,210 @@
     </video>
     <div class="hero-video-overlay"></div>
   </div>
-  <div class="wrap">
+
+  <div class="wrap hero-wrap-content">
     <div class="hero-copy reveal">
-      <h1 class="h1">Designing Spaces.<br>Building Trust.<br>Shaping Tomorrow.</h1>
-      <p class="body-text">40+ Years of Excellence in Architecture, Liaison and Project Management</p>
+      <div class="hero-subtag">ARCHITECTURAL EXCELLENCE • MUMBAI &amp; PUNE</div>
+      <h1 class="h1 hero-main-title">
+        Designing Spaces.<br>
+        Building Trust.<br>
+        Shaping Tomorrow.
+      </h1>
+      <p class="body-text hero-body-desc">
+        To us, Architecture is about public realms that are held together by buildings. Over 40 years of precision in Architectural Design, Liaisoning, and Project Management Consultancy.
+      </p>
       <div class="button-con">
         <a href="#projects" class="btn btn-primary">Explore Projects <span class="btn-arrow">→</span></a>
-        <a href="contact.html" class="btn btn-secondary">Book an Appointment <span class="btn-arrow">→</span></a>
+        <a href="contact.html" class="btn btn-secondary">Book a Consultation <span class="btn-arrow">→</span></a>
       </div>
     </div>
+
+    <!-- Floating Glass Badges -->
     <div class="metrics-container reveal">
       <div class="metric-card">
-        <div class="icon-wrapper"><i class="fas fa-clock"></i></div>
-        <div class="text-wrapper"><h3 class="counter-number" data-target="40">0</h3><p class="counter-label">Years of Experience</p></div>
+        <div class="icon-wrapper"><i class="fa-regular fa-clock"></i></div>
+        <div class="text-wrapper">
+          <h3 class="counter-number" data-target="40">0</h3>
+          <p class="counter-label">Years of Experience</p>
+        </div>
       </div>
       <div class="metric-card">
-        <div class="icon-wrapper"><i class="fas fa-building"></i></div>
-        <div class="text-wrapper"><h3 class="counter-number" data-target="500">0</h3><p class="counter-label">Projects Delivered</p></div>
+        <div class="icon-wrapper"><i class="fa-regular fa-building"></i></div>
+        <div class="text-wrapper">
+          <h3 class="counter-number" data-target="500">0</h3>
+          <p class="counter-label">Projects Delivered</p>
+        </div>
       </div>
       <div class="metric-card">
-        <div class="icon-wrapper"><i class="fas fa-trophy"></i></div>
-        <div class="text-wrapper"><h3 class="counter-number" data-target="100">0</h3><p class="counter-label">Happy Clients</p></div>
+        <div class="icon-wrapper"><i class="fa-solid fa-trophy"></i></div>
+        <div class="text-wrapper">
+          <h3 class="counter-number" data-target="100">0</h3>
+          <p class="counter-label">Happy Clients</p>
+        </div>
       </div>
       <div class="metric-card">
-        <div class="icon-wrapper"><i class="fas fa-shield-alt"></i></div>
-        <div class="text-wrapper"><span class="static-prefix">GOVT.</span><p class="counter-label">Approved Consultants</p></div>
+        <div class="icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="text-wrapper">
+          <span class="static-prefix">GOVT.</span>
+          <p class="counter-label">Approved Consultants</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Down Button -->
+  <a href="#services" class="bdt-scroll-down-btn" aria-label="Scroll to Services">
+    <svg class="bdt-scroll-down-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M19 12l-7 7-7-7"/>
+    </svg>
+    <span>Scroll Down</span>
+  </a>
+</section>
+
+<!-- ============================== SERVICES QUICK STRIP (DAISARIA STYLE) ============================== -->
+<section class="services-quick-strip" id="services">
+  <div class="wrap">
+    <div class="services-strip-header reveal">
+      <div>
+        <span class="section-tag-gold">WHAT WE DO</span>
+        <h2 class="services-strip-title">Our Services</h2>
+      </div>
+      <a href="architectural-design.html" class="services-all-link">All Services <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+    <div class="services-quick-grid reveal-up">
+      <a href="architectural-design.html" class="service-quick-item">
+        <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="service-name">Architectural Design</span>
+      </a>
+      <a href="liaison.html" class="service-quick-item">
+        <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="service-name">Architectural Liaisoning</span>
+      </a>
+      <a href="pmc.html" class="service-quick-item">
+        <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="service-name">Project Management (PMC)</span>
+      </a>
+      <a href="interior-design.html" class="service-quick-item">
+        <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="service-name">Interior Design</span>
+      </a>
+      <a href="liaison.html#approvals" class="service-quick-item">
+        <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+        <span class="service-name">Government Approvals</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 6-COUNTER STATISTICS GRID (DAISARIA STYLE) ============================== -->
+<section class="stats-section-daisaria">
+  <div class="wrap">
+    <div class="stats-grid-6">
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="250">0</span><span class="plus">+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">Clientele</div>
+      </div>
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="500">0</span><span class="plus">+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">Projects Delivered</div>
+      </div>
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="25">0</span><span class="plus">M+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">Sq.ft of Construction Area</div>
+      </div>
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="40">0</span><span class="plus">+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">Years of Experience</div>
+      </div>
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="35">0</span><span class="plus">+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">National &amp; State Awards</div>
+      </div>
+      <div class="stat-box-daisaria reveal">
+        <div class="stat-box-num"><span class="counter-number" data-target="60">0</span><span class="plus">+</span></div>
+        <div class="stat-box-line"></div>
+        <div class="stat-box-label">Team of Professionals</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================== EXPERTISE ============================== -->
+<!-- ============================== INFINITE ARCHITECTURAL MARQUEE TICKER ============================== -->
+<div class="marquee-strip-daisaria">
+  <div class="marquee-track-daisaria">
+    <div class="marquee-item-daisaria">
+      <span>Architecture that speaks before words do</span>
+      <span class="marquee-dot"></span>
+      <span>Architecture is the art of shaping how we live</span>
+      <span class="marquee-dot"></span>
+      <span>Designing Spaces, Building Trust, Shaping Tomorrow</span>
+      <span class="marquee-dot"></span>
+      <span>40+ Years of Mumbai &amp; Pune Skyline Leadership</span>
+      <span class="marquee-dot"></span>
+    </div>
+    <!-- Duplicate for seamless 100% infinite loop -->
+    <div class="marquee-item-daisaria">
+      <span>Architecture that speaks before words do</span>
+      <span class="marquee-dot"></span>
+      <span>Architecture is the art of shaping how we live</span>
+      <span class="marquee-dot"></span>
+      <span>Designing Spaces, Building Trust, Shaping Tomorrow</span>
+      <span class="marquee-dot"></span>
+      <span>40+ Years of Mumbai &amp; Pune Skyline Leadership</span>
+      <span class="marquee-dot"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================== DISCOVER OUR STORY (ABOUT US) ============================== -->
+<section class="story-daisaria-section" id="about">
+  <div class="wrap">
+    <div class="story-daisaria-grid">
+      <!-- Left: Stacked Architectural Image -->
+      <div class="story-images-stack reveal-left">
+        <img src="assets/about-team-meeting.jpg" alt="Shilp Associates Office Team &amp; Skyline Architecture" class="story-main-img">
+        <div class="story-badge-floating">
+          <div class="story-badge-years">40+</div>
+          <div class="story-badge-text">Years of Legacy</div>
+        </div>
+      </div>
+
+      <!-- Right: Story Narrative -->
+      <div class="story-content-side reveal-right">
+        <span class="story-tag-top">ABOUT US</span>
+        <h2 class="story-title-main">Discover Our Story</h2>
+        <p class="story-lead-p">
+          <strong>Step into the Legacy of Design Excellence with Shilp Associates</strong>
+        </p>
+        <p class="story-body-p">
+          For over four decades, Shilp Associates has stood as a beacon of architectural innovation, due diligence, and structural mastery across Mumbai and Pune. Founded by Sandeep Patel, the firm continues to blend heritage with forward-thinking design, delivering over 500 iconic residential, commercial, PMC, and municipal liaison milestones.
+        </p>
+        <p class="story-body-p">
+          At Shilp Associates, we don't just build structures—we bring visions to life. Whether you're envisioning a complex urban development requiring municipal liaison expertise or high-density housing with turnkey execution, our doors are always open to your aspirations.
+        </p>
+        <div class="founder-signature-box" style="margin-bottom: 24px;">
+          <div class="font-signature">Sandeep Patel</div>
+          <div class="founder-role">Founder &amp; Principal Architect</div>
+        </div>
+        <div>
+          <a href="about.html" class="btn btn-primary btn-blue">Explore Our Story <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== EXPERTISE DETAILED CARDS ============================== -->
 <section class="expertise-section">
   <div class="wrap">
     <header class="section-header reveal">
       <span class="section-subtitle">What We Do</span>
-      <h2 class="section-title">Our Expertise</h2>
+      <h2 class="section-title">Our Core Competencies</h2>
     </header>
     <div class="expertise-grid">
 
@@ -88,9 +284,9 @@
         <div class="card-body">
           <h3 class="card-title">Liaison Services</h3>
           <ul class="card-features">
-            <li>Seamless approvals.</li>
-            <li>Timely clearances.</li>
-            <li>Strong relationships.</li>
+            <li>Seamless BMC &amp; PMC approvals.</li>
+            <li>Due diligence &amp; regulatory clearances.</li>
+            <li>Fast-track municipal compliance.</li>
           </ul>
           <a href="liaison.html" class="card-link">Explore <span class="btn-arrow">→</span></a>
         </div>
@@ -100,11 +296,11 @@
         <div class="card-image-wrapper"><img class="card-image" src="assets/expertise-pmc.jpeg" alt="PMC Construction site"></div>
         <div class="card-icon-container"><i class="fa-solid fa-clipboard-check"></i></div>
         <div class="card-body">
-          <h3 class="card-title">PMC</h3>
+          <h3 class="card-title">Project Management (PMC)</h3>
           <ul class="card-features">
-            <li>Efficient planning.</li>
-            <li>Cost control.</li>
-            <li>Timely delivery.</li>
+            <li>End-to-end site supervision.</li>
+            <li>Strict cost control &amp; budgeting.</li>
+            <li>On-schedule quality delivery.</li>
           </ul>
           <a href="pmc.html" class="card-link">Explore <span class="btn-arrow">→</span></a>
         </div>
@@ -116,9 +312,9 @@
         <div class="card-body">
           <h3 class="card-title">Architectural Design</h3>
           <ul class="card-features">
-            <li>Thoughtful design.</li>
-            <li>Functional spaces.</li>
-            <li>Timeless aesthetics.</li>
+            <li>Conceptual planning &amp; blueprints.</li>
+            <li>Functional urban space optimization.</li>
+            <li>Contemporary facade &amp; massing.</li>
           </ul>
           <a href="architectural-design.html" class="card-link">Explore <span class="btn-arrow">→</span></a>
         </div>
@@ -130,9 +326,9 @@
         <div class="card-body">
           <h3 class="card-title">Interior Design</h3>
           <ul class="card-features">
-            <li>Elegant interiors.</li>
-            <li>Refined detail.</li>
-            <li>Inspired living.</li>
+            <li>Bespoke luxury residential interiors.</li>
+            <li>Modern commercial workspace layouts.</li>
+            <li>Turnkey material &amp; lighting curated.</li>
           </ul>
           <a href="interior-design.html" class="card-link">Explore <span class="btn-arrow">→</span></a>
         </div>
@@ -142,90 +338,52 @@
   </div>
 </section>
 
-<!-- ============================== ABOUT SHILP ASSOCIATES ============================== -->
-<section class="about-section" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="about-content reveal-left">
-        <span class="section-tag-gold">ABOUT SHILP ASSOCIATES</span>
-        <h2 class="about-title">40 Years of Building Mumbai's Skyline</h2>
-        <p class="about-desc">Shilp Associates is a multidisciplinary firm offering Liaison, PMC, Architectural and Interior Design services. With passion, precision and integrity, we turn ideas into iconic spaces.</p>
-        <div class="founder-signature-box">
-          <div class="font-signature">Sandeep Patel</div>
-          <div class="founder-role">Founder</div>
-        </div>
-        <div class="button-con">
-          <a href="about.html" class="btn btn-primary">Our Story <span class="btn-arrow">→</span></a>
-        </div>
-      </div>
-      <div class="about-img-container reveal-right">
-        <img src="assets/about-team-meeting.jpg" alt="Shilp Associates Office Team Meeting &amp; Mumbai Skyline Architecture" class="about-img">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== VIDEO BANNER ============================== -->
-<section class="hero-video-wrapper">
-  <video class="hero-video-bg" autoplay muted loop playsinline>
-    <source src="https://mediumorchid-oryx-889489.hostingersite.com/wp-content/uploads/2026/07/Luxury-hotels-b-rolls-3.mp4" type="video/mp4">
-  </video>
-  <div class="hero-video-overlay"></div>
-  <div class="hero-content">
-    <h1 class="hero-heading">Building Beyond Structures.<br>Creating Lasting Impact.</h1>
-  </div>
-</section>
-
-<!-- ============================== FEATURED PROJECTS ============================== -->
+<!-- ============================== FEATURED PROJECTS (DAISARIA HOVER SHOWCASE) ============================== -->
 <section class="featured-projects-section" id="projects">
   <div class="wrap">
     <div class="section-flex-header reveal">
-      <h2 class="h2">Featured Projects</h2>
-      <a href="portfolio.html" class="btn btn-primary btn-blue">View All <span class="btn-arrow">→</span></a>
+      <div>
+        <span class="section-tag-gold">SELECTED WORKS</span>
+        <h2 class="h2">Featured Projects</h2>
+      </div>
+      <a href="portfolio.html" class="btn btn-primary btn-blue">View All Projects <span class="btn-arrow">→</span></a>
     </div>
-    <div class="projects-grid">
+    
+    <div class="projects-grid-daisaria reveal-up">
 
-      <div class="project-card reveal">
-        <div class="project-image-wrapper">
-          <img class="project-image" src="assets/project-chaitanya-chsl.png" alt="Chaitanya CHSL">
-        </div>
-        <div class="project-info">
-          <h3 class="project-title">Chaitanya CHSL</h3>
-          <p class="project-category">Liaison – Santacruz East</p>
-          <button class="btn btn-primary lightbox-trigger" data-lightbox="assets/project-chaitanya-chsl.png">View Project <span class="btn-arrow">→</span></button>
+      <div class="building-box lightbox-trigger" data-lightbox="assets/project-chaitanya-chsl.png">
+        <img class="building-img" src="assets/project-chaitanya-chsl.png" alt="Chaitanya CHSL">
+        <div class="building-overlay">
+          <span class="building-tag">Liaison Services</span>
+          <h3 class="building-title">Chaitanya CHSL</h3>
+          <p class="building-location">Santacruz East, Mumbai</p>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image-wrapper">
-          <img class="project-image" src="assets/project-om-niwas-chsl.png" alt="Om Niwas CHSL">
-        </div>
-        <div class="project-info">
-          <h3 class="project-title">Om Niwas CHSL</h3>
-          <p class="project-category">PMC – Ghatkopar (East)</p>
-          <button class="btn btn-primary lightbox-trigger" data-lightbox="assets/project-om-niwas-chsl.png">View Project <span class="btn-arrow">→</span></button>
+      <div class="building-box lightbox-trigger" data-lightbox="assets/project-om-niwas-chsl.png">
+        <img class="building-img" src="assets/project-om-niwas-chsl.png" alt="Om Niwas CHSL">
+        <div class="building-overlay">
+          <span class="building-tag">Project Management (PMC)</span>
+          <h3 class="building-title">Om Niwas CHSL</h3>
+          <p class="building-location">Ghatkopar East, Mumbai</p>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image-wrapper">
-          <img class="project-image" src="assets/project-jeevandham-chsl.png" alt="Jeevandham CHSL">
-        </div>
-        <div class="project-info">
-          <h3 class="project-title">Jeevandham CHSL</h3>
-          <p class="project-category">Architectural Design – Andheri (East)</p>
-          <button class="btn btn-primary lightbox-trigger" data-lightbox="assets/project-jeevandham-chsl.png">View Project <span class="btn-arrow">→</span></button>
+      <div class="building-box lightbox-trigger" data-lightbox="assets/project-jeevandham-chsl.png">
+        <img class="building-img" src="assets/project-jeevandham-chsl.png" alt="Jeevandham CHSL">
+        <div class="building-overlay">
+          <span class="building-tag">Architectural Design</span>
+          <h3 class="building-title">Jeevandham CHSL</h3>
+          <p class="building-location">Andheri East, Mumbai</p>
         </div>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-image-wrapper">
-          <img class="project-image" src="assets/project-siddhi-aura.png" alt="Siddhi Aura">
-        </div>
-        <div class="project-info">
-          <h3 class="project-title">Siddhi Aura</h3>
-          <p class="project-category">Interior Design – Andheri (East)</p>
-          <button class="btn btn-primary lightbox-trigger" data-lightbox="assets/project-siddhi-aura.png">View Project <span class="btn-arrow">→</span></button>
+      <div class="building-box lightbox-trigger" data-lightbox="assets/project-siddhi-aura.png">
+        <img class="building-img" src="assets/project-siddhi-aura.png" alt="Siddhi Aura">
+        <div class="building-overlay">
+          <span class="building-tag">Interior Architecture</span>
+          <h3 class="building-title">Siddhi Aura</h3>
+          <p class="building-location">Andheri East, Mumbai</p>
         </div>
       </div>
 
@@ -233,15 +391,15 @@
   </div>
 </section>
 
-<!-- Lightbox -->
+<!-- Lightbox Modal -->
 <div class="site-lightbox" id="siteLightbox">
   <div class="lightbox-content">
-    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
     <img class="lightbox-img" id="lightboxImg" src="" alt="Project Expanded View">
   </div>
 </div>
 
-<!-- ============================== TESTIMONIALS ============================== -->
+<!-- ============================== TESTIMONIALS (CLIENTELE REPUTATION) ============================== -->
 <section class="arch-tstm-section-wrapper">
   <div class="arch-tstm-main-container">
     <div class="arch-tstm-section-title">What Our Clients Say</div>
@@ -250,22 +408,22 @@
         <div class="arch-tstm-slide-item">
           <div class="arch-tstm-quote-icon">"</div>
           <div>
-            <p class="arch-tstm-text">We have been working with Shilp Associates for over a decade. Their commitment to quality, expertise in approvals and timely delivery is unmatched.</p>
-            <span class="arch-tstm-author">— CEO, Leading Developer</span>
+            <p class="arch-tstm-text">We have been working with Shilp Associates for over a decade. Their commitment to quality, expertise in regulatory approvals, and on-schedule execution is unmatched in the industry.</p>
+            <span class="arch-tstm-author">— CEO, Leading Mumbai Real Estate Developer</span>
           </div>
         </div>
         <div class="arch-tstm-slide-item">
           <div class="arch-tstm-quote-icon">"</div>
           <div>
-            <p class="arch-tstm-text">Their architectural designs balance structural integrity with premium aesthetics seamlessly. A true long-term growth partner.</p>
+            <p class="arch-tstm-text">Their architectural designs balance structural efficiency with modern aesthetic appeal effortlessly. A trusted partner across all our high-rise ventures.</p>
             <span class="arch-tstm-author">— Managing Director, Nexa Corp</span>
           </div>
         </div>
         <div class="arch-tstm-slide-item">
           <div class="arch-tstm-quote-icon">"</div>
           <div>
-            <p class="arch-tstm-text">Exceptional handling of complex documentation, layouts, and site optimization blueprints. Exceeded every benchmark.</p>
-            <span class="arch-tstm-author">— Operations Head, Apex Infra</span>
+            <p class="arch-tstm-text">Exceptional handling of complex municipal clearances, due diligence, and PMC site management. Exceeded every benchmark.</p>
+            <span class="arch-tstm-author">— Operations Head, Apex Infrastructure</span>
           </div>
         </div>
       </div>
@@ -282,7 +440,8 @@
 <!-- ============================== CLIENTS MARQUEE ============================== -->
 <section class="clients-section reveal-up">
   <div class="wrap">
-    <h2 class="h2">Our Clients</h2>
+    <span class="section-tag-gold" style="text-align: center; display: block; margin-bottom: 8px;">TRUSTED BY INDUSTRY LEADERS</span>
+    <h2 class="h2" style="text-align: center; margin-bottom: 40px;">Our Esteemed Clients &amp; Partners</h2>
   </div>
   <div class="logo-marquee-container">
     <!-- Row 1: Leftward Infinite Scroll -->
@@ -296,15 +455,7 @@
         <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
         <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
         <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
-        <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
-        <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
-        <!-- Duplicate set for seamless 100% infinite loop -->
-        <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
-        <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
+        <!-- Duplicate set for seamless loop -->
         <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
         <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
         <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
@@ -315,7 +466,7 @@
         <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
       </div>
     </div>
-    <!-- Row 2: Rightward Infinite Scroll (Opposite Direction) -->
+    <!-- Row 2: Rightward Infinite Scroll -->
     <div class="logo-marquee-row">
       <div class="marquee-track marquee-track-right">
         <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
@@ -326,15 +477,7 @@
         <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
         <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
         <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
-        <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
-        <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
-        <!-- Duplicate set for seamless 100% infinite loop -->
-        <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
-        <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
-        <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
-        <div class="marquee-card-box"><img src="assets/client-lodha.png" alt="Lodha Group"></div>
+        <!-- Duplicate set for seamless loop -->
         <div class="marquee-card-box"><img src="assets/client-logo4.jpg" alt="DLF Building India"></div>
         <div class="marquee-card-box"><img src="assets/client-mahindra.jpg" alt="Mahindra Lifespaces"></div>
         <div class="marquee-card-box"><img src="assets/client-logo2.jpg" alt="Oberoi Realty"></div>
@@ -348,19 +491,22 @@
   </div>
 </section>
 
-<!-- ============================== LATEST INSIGHTS ============================== -->
-<section class="insights-section">
+<!-- ============================== LATEST INSIGHTS & MEDIA ============================== -->
+<section class="insights-section" id="insights">
   <div class="wrap">
     <div class="section-flex-header reveal">
-      <h2 class="h2">Latest Insights</h2>
-      <a href="#" class="btn btn-primary btn-blue">View More <span class="btn-arrow">→</span></a>
+      <div>
+        <span class="section-tag-gold">THOUGHT LEADERSHIP</span>
+        <h2 class="h2">Latest Insights &amp; Media</h2>
+      </div>
+      <a href="#" class="btn btn-primary btn-blue">View All Insights <span class="btn-arrow">→</span></a>
     </div>
     <div class="arch-ins-main-grid">
       <a href="#" class="arch-ins-card reveal">
         <div class="arch-ins-img-box"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=500&q=80" alt="Liaison Services"></div>
         <div class="arch-ins-content">
           <div class="arch-ins-date">12 May 2026</div>
-          <h3 class="arch-ins-title">How Liaison Services Save Time &amp; Cost</h3>
+          <h3 class="arch-ins-title">How Liaison Services Save Time &amp; Cost in Mumbai Real Estate</h3>
           <div class="arch-ins-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
@@ -368,7 +514,7 @@
         <div class="arch-ins-img-box"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" alt="PMC Best Practices"></div>
         <div class="arch-ins-content">
           <div class="arch-ins-date">08 May 2026</div>
-          <h3 class="arch-ins-title">PMC Best Practices for Developers</h3>
+          <h3 class="arch-ins-title">PMC Best Practices: Optimizing Timelines and Quality</h3>
           <div class="arch-ins-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
@@ -376,14 +522,14 @@
         <div class="arch-ins-img-box"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500&q=80" alt="Architecture Trends"></div>
         <div class="arch-ins-content">
           <div class="arch-ins-date">28 Apr 2026</div>
-          <h3 class="arch-ins-title">Architecture Trends in 2026</h3>
+          <h3 class="arch-ins-title">Sustainable Architectural Trends Shaping Modern Horizons</h3>
           <div class="arch-ins-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      <a href="#" class="arch-ins-career-banner reveal">
+      <a href="contact.html" class="arch-ins-career-banner reveal">
         <div class="arch-ins-career-text-side">
-          <div class="arch-ins-career-tag">Join Our Team</div>
-          <h2 class="arch-ins-career-title">Build Your Career with Shilp</h2>
+          <div class="arch-ins-career-tag">CAREERS AT SHILP</div>
+          <h2 class="arch-ins-career-title">Build Your Career with Shilp Associates</h2>
           <div class="arch-ins-career-btn">Explore Opportunities <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="arch-ins-career-img-side"><img src="assets/career-workspace.png" alt="Join Team Workspace"></div>
@@ -396,31 +542,60 @@
 <section class="cta-section" id="cta">
   <div class="wrap">
     <h2 class="h2 reveal">Let's Create Something Extraordinary Together</h2>
-    <div class="button-con reveal">
-      <a href="contact.html" class="btn btn-primary">Schedule a Consultation <span class="btn-arrow">→</span></a>
+    <p class="body-text reveal" style="max-width: 650px; margin: 16px auto 32px; color: rgba(255,255,255,0.85); text-align: center;">
+      Partner with Shilp Associates for visionary architectural design, seamless liaison approvals, and disciplined PMC execution across Mumbai &amp; Pune.
+    </p>
+    <div class="button-con reveal" style="justify-content: center;">
+      <a href="contact.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 1rem;">Schedule a Consultation <span class="btn-arrow">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- ============================== FOOTER ============================== -->
+<!-- ============================== FOOTER (DAISARIA AESTHETIC) ============================== -->
 <footer class="site-footer">
-  <div class="footer-logo"><a href="index.html"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a></div>
-  <nav class="footer-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pune.html">Pune</a></li>
-      <li><a href="liaison.html">Liaison</a></li>
-      <li><a href="pmc.html">PMC</a></li>
-      <li><a href="architectural-design.html">Architectural Design</a></li>
-      <li><a href="interior-design.html">Interior Design</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Career</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="footer-bottom"><p>© 2026 Shilp Associates. All Rights Reserved.</p></div>
+  <div class="wrap footer-content-wrap">
+    <div class="footer-top-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-col-brand">
+        <div class="footer-logo"><a href="index.html"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a></div>
+        <p class="footer-brand-desc">
+          Shilp Associates is a premier multidisciplinary firm specializing in Architectural Design, Liaison Services, Project Management Consultancy (PMC), and Interior Design across Maharashtra.
+        </p>
+      </div>
+      <!-- Col 2: Services -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Services</h4>
+        <ul>
+          <li><a href="architectural-design.html">Architectural Design</a></li>
+          <li><a href="liaison.html">Liaisoning &amp; Approvals</a></li>
+          <li><a href="pmc.html">Project Management (PMC)</a></li>
+          <li><a href="interior-design.html">Interior Design</a></li>
+          <li><a href="liaison.html#due-diligence">Due Diligence &amp; Feasibility</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Quick Links -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Our Legacy</a></li>
+          <li><a href="pune.html">Pune Office</a></li>
+          <li><a href="portfolio.html">Featured Portfolio</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact Offices -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Offices</h4>
+        <p class="footer-contact-p"><strong>Mumbai:</strong> Santacruz East, Mumbai, Maharashtra</p>
+        <p class="footer-contact-p"><strong>Pune:</strong> Shivaji Nagar, Pune, Maharashtra</p>
+        <p class="footer-contact-p"><strong>Email:</strong> info@shilpassociates.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shilp Associates. All Rights Reserved. Strategic Architectural Design &amp; Liaisoning.</p>
+    </div>
+  </div>
 </footer>
 
 <script src="assets/main.js"></script>
