@@ -803,6 +803,111 @@ h1, h2, h3, h4, h5, h6 {
 .faq-answer p { padding: 0 0 22px; color: var(--clr-muted); font-size: .98rem; font-family: var(--font-body); line-height: 1.65; max-width: 720px; }
 
 /* ==========================================================================
+   FOUNDERS & EXECUTIVE LEADERSHIP CARDS
+   ========================================================================== */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin: 36px auto 0;
+}
+@media (max-width: 960px) {
+  .founders-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+@media (max-width: 640px) {
+  .founders-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 28px auto 0;
+  }
+}
+.founder-card {
+  background: #ffffff;
+  border: 1px solid rgba(5, 38, 77, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(5, 38, 77, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(5, 38, 77, 0.10);
+  border-color: rgba(245, 179, 53, 0.4);
+}
+.founder-photo-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 3.8;
+  overflow: hidden;
+  background: #eaecef;
+}
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform .4s ease;
+}
+.founder-card:hover .founder-photo {
+  transform: scale(1.03);
+}
+.founder-info {
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+.founder-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.founder-role {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.founder-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf0f5;
+}
+.founder-credentials span {
+  font-size: 0.84rem;
+  color: #555e6d;
+  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1.35;
+}
+.founder-credentials span i {
+  color: var(--color-navy);
+  font-size: 0.8rem;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
    TEAM GRID
    ========================================================================== */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 32px; margin-top: 16px; }
