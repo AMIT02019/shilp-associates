@@ -26,6 +26,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 110px; }
 body {
   font-family: var(--font-body);
   color: var(--color-charcoal);
@@ -853,15 +854,6 @@ h1, h2, h3, h4, h5, h6 {
   .page-hero { min-height: 38vh; padding: 120px 24px 56px; }
 }
 
-/* Mobile Nav Dropdown */
-@media (max-width: 1024px) {
-  .main-nav.mobile-open {
-    display: block; position: absolute; top: 100%; left: 0; right: 0; background: #0f2236;
-    padding: 20px 32px; box-shadow: 0 12px 24px rgba(0,0,0,.2);
-  }
-  .main-nav.mobile-open ul { flex-direction: column; gap: 18px; }
-  .site-header { position: sticky; }
-}
 
 /* ==========================================================================
    ADVANCED ON-SCROLL ANIMATIONS & EFFECTS
@@ -1261,82 +1253,6 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    DAISARIA ARCHITECTS AESTHETIC ENHANCEMENTS
    ========================================================================== */
-
-/* Header Dropdown Menu */
-.main-nav .has-dropdown {
-  position: relative;
-  padding-block: 6px;
-}
-.nav-dropdown-icon {
-  font-size: 0.65rem;
-  margin-left: 4px;
-  transition: transform 0.25s ease;
-  vertical-align: middle;
-}
-.has-dropdown:hover .nav-dropdown-icon {
-  transform: rotate(180deg);
-}
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 14px);
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: #ffffff;
-  min-width: 230px;
-  padding: 10px 0;
-  border-radius: 12px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(5, 38, 77, 0.08);
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
-  z-index: 99999;
-}
-.dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -14px;
-  left: 0;
-  right: 0;
-  height: 14px;
-  background: transparent;
-}
-.has-dropdown:hover .dropdown-menu,
-.has-dropdown:focus-within .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
-}
-.dropdown-menu li {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-.dropdown-menu li a {
-  display: block !important;
-  width: 100%;
-  padding: 10px 22px !important;
-  color: #05264d !important;
-  font-family: var(--font-heading) !important;
-  font-size: 0.88rem !important;
-  font-weight: 500 !important;
-  text-decoration: none !important;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease !important;
-}
-.dropdown-menu li a::after {
-  display: none !important;
-}
-.dropdown-menu li a:hover {
-  background: #f4f6fa !important;
-  color: #f5b335 !important;
-  padding-left: 26px !important;
-}
 .header-right-actions {
   display: flex;
   align-items: center;
@@ -1829,7 +1745,7 @@ body.nav-locked {
   top: 16px;
   left: 0;
   right: 0;
-  z-index: 2000;
+  z-index: 9999;
   width: min(94%, 1380px);
   margin: 0 auto;
   border-radius: 50px;
@@ -1960,7 +1876,7 @@ body.nav-locked {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
-  z-index: 2500;
+  z-index: 10000;
 }
 /* Invisible hover bridge */
 .dropdown-menu::before {
@@ -2045,7 +1961,7 @@ body.nav-locked {
   padding: 8px;
   flex-direction: column;
   gap: 5px;
-  z-index: 2200;
+  z-index: 10005;
 }
 .nav-toggle span {
   display: block;
@@ -2102,7 +2018,7 @@ body.nav-locked {
     transform: translateY(-20px);
     transition: opacity 0.35s ease, visibility 0.35s ease, transform 0.35s ease;
     overflow-y: auto;
-    z-index: 1900;
+    z-index: 9998;
   }
   .main-nav.mobile-open {
     opacity: 1;
@@ -2124,6 +2040,7 @@ body.nav-locked {
   .nav-item-link-wrap {
     width: 100%;
     justify-content: space-between;
+    cursor: pointer;
   }
   .main-nav a {
     font-size: 1.15rem;
@@ -2135,6 +2052,15 @@ body.nav-locked {
     padding: 10px 14px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
+    cursor: pointer;
+  }
+  .has-dropdown.is-open .dropdown-trigger-btn {
+    background: rgba(245, 179, 53, 0.25);
+    color: var(--color-gold);
+  }
+  .has-dropdown.is-open .nav-dropdown-icon {
+    transform: rotate(180deg);
+    color: var(--color-gold);
   }
   .dropdown-menu {
     position: static;
@@ -2161,10 +2087,12 @@ body.nav-locked {
   .dropdown-menu li a {
     color: rgba(255, 255, 255, 0.85) !important;
     font-size: 0.95rem !important;
-    padding: 8px 16px !important;
+    padding: 10px 16px !important;
+    display: block !important;
   }
   .dropdown-menu li a:hover {
     background: rgba(255, 255, 255, 0.1) !important;
     color: var(--color-gold) !important;
+    padding-left: 20px !important;
   }
 }
