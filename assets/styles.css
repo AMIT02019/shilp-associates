@@ -1415,7 +1415,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .stats-section-daisaria {
   background: #ffffff;
-  padding: 70px 0 80px;
+  padding: 56px 0 60px;
 }
 .stats-grid-6 {
   display: grid;
@@ -1481,7 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .marquee-strip-daisaria {
   background: var(--color-navy-dark);
-  padding: 22px 0;
+  padding: 10px 0;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -1497,13 +1497,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .marquee-item-daisaria {
   font-family: var(--font-heading);
-  font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+  font-size: clamp(1rem, 1.35vw, 1.35rem);
   font-weight: 400;
+  line-height: 1.2;
   color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 28px;
-  padding-right: 28px;
+  gap: 24px;
+  padding-right: 24px;
   letter-spacing: 0.03em;
 }
 .marquee-dot {
@@ -1522,7 +1523,7 @@ h1, h2, h3, h4, h5, h6 {
    DISCOVER OUR STORY (2-COLUMN DAISARIA AESTHETIC)
    ========================================================================== */
 .story-daisaria-section {
-  padding: 100px 0;
+  padding: 75px 0;
   background: #fbfbfe;
 }
 .story-daisaria-grid {
