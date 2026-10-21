@@ -740,9 +740,9 @@ h1, h2, h3, h4, h5, h6 {
    INNER PAGE — PAGE HEADER BANNER
    ========================================================================== */
 .page-hero {
-  min-height: 48vh; display: flex; align-items: center; justify-content: center; text-align: center;
-  background: linear-gradient(rgba(5, 20, 38, 0.50) 0%, rgba(5, 20, 38, 0.65) 100%), var(--page-hero-img) no-repeat center center / cover;
-  padding: 140px 32px 72px;
+  min-height: 64vh; min-height: max(64vh, 520px); display: flex; align-items: center; justify-content: center; text-align: center;
+  background: linear-gradient(rgba(5, 20, 38, 0.40) 0%, rgba(5, 20, 38, 0.60) 100%), var(--page-hero-img) no-repeat center center / cover;
+  padding: 175px 32px 105px;
 }
 .page-hero .eyebrow { font-family: var(--font-heading); color: var(--color-gold); text-transform: uppercase; letter-spacing: 3px; font-size: .85rem; font-weight: 700; margin-bottom: 16px; text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
 .page-hero h1 { font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.2rem,4vw + 1rem,3.75rem); color: #fff; line-height: 1.15; max-width: 900px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
@@ -956,7 +956,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .content-section { padding: 56px 0; }
-  .page-hero { min-height: 38vh; padding: 120px 24px 56px; }
+  .page-hero { min-height: 48vh; min-height: max(48vh, 380px); padding: 135px 20px 65px; }
 }
 
 
@@ -1021,7 +1021,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Split-Screen Hero */
 .pune-hero-split {
-  padding: 140px 0 80px;
+  min-height: 64vh; min-height: max(64vh, 520px);
+  display: flex; align-items: center;
+  padding: 175px 0 100px;
   background: linear-gradient(135deg, #0F2236 0%, #1F4160 100%);
   color: #fff;
   position: relative;
