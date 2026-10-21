@@ -822,7 +822,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.12;
+  opacity: 0.7;
 }
 .overview-wrap {
   position: relative;
@@ -832,8 +832,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 32px;
 }
 .overview-content {
-  max-width: 800px;
+  max-width: 680px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px 44px;
+  border-radius: 6px;
 }
 .founder-line {
   font-family: var(--font-heading);
@@ -883,10 +886,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 960px) {
   .overview-bg-blueprint {
-    opacity: 0.08;
+    opacity: 0.15;
   }
   .overview-content {
     max-width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 28px 20px;
   }
 }
 @media (max-width: 600px) {
