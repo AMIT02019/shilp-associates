@@ -740,10 +740,18 @@ h1, h2, h3, h4, h5, h6 {
    INNER PAGE — PAGE HEADER BANNER (Crystal-Clear High Visibility Imagery)
    ========================================================================== */
 .page-hero {
-  min-height: 64vh; min-height: max(64vh, 520px); display: flex; align-items: center; justify-content: center; text-align: center;
-  background: linear-gradient(180deg, rgba(5, 20, 38, 0.10) 0%, rgba(5, 20, 38, 0.22) 50%, rgba(5, 20, 38, 0.40) 100%), var(--page-hero-img) no-repeat center center / cover;
-  padding: 175px 32px 105px;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(5, 20, 38, 0.40) 0%, rgba(5, 20, 38, 0.28) 45%, rgba(5, 20, 38, 0.58) 100%), var(--page-hero-img) no-repeat center center / cover;
+  padding: 150px 32px 80px;
   position: relative;
+  box-sizing: border-box;
+}
+.page-hero > .wrap {
+  width: 100%;
 }
 .page-hero .eyebrow { font-family: var(--font-heading); color: var(--color-gold); text-transform: uppercase; letter-spacing: 3px; font-size: .88rem; font-weight: 700; margin-bottom: 16px; text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
 .page-hero h1 { font-family: var(--font-heading); font-weight: 500; font-size: clamp(2.4rem,4.5vw + 1rem,4rem); color: #fff; line-height: 1.15; max-width: 960px; margin: 0 auto; text-shadow: 0 3px 18px rgba(0,0,0,0.85), 0 1px 4px rgba(0,0,0,0.95); }
@@ -1058,7 +1066,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   .content-section { padding: 56px 0; }
-  .page-hero { min-height: 48vh; min-height: max(48vh, 380px); padding: 135px 20px 65px; }
+  .page-hero { min-height: 420px; padding: 125px 20px 50px; }
 }
 
 
@@ -2494,10 +2502,18 @@ body.nav-locked {
     display: none !important;
   }
 
-  /* Page Hero Banners (Inner Pages) */
+  /* Page Hero Banners (Inner Pages) - Unified 420px height matching About page */
   .page-hero {
-    min-height: auto;
-    padding: 130px 20px 55px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 125px 20px 50px;
+    box-sizing: border-box;
+  }
+  .page-hero > .wrap {
+    width: 100%;
   }
   .page-hero .eyebrow {
     font-size: 0.78rem;
