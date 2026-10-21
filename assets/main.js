@@ -271,4 +271,22 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Hero Video Autoplay Assurance & Instant Start
+  const heroVideo = document.querySelector('.hero-video-element');
+  if (heroVideo) {
+    const playVideo = () => {
+      heroVideo.muted = true;
+      const promise = heroVideo.play();
+      if (promise !== undefined) {
+        promise.catch(() => {});
+      }
+    };
+    if (heroVideo.readyState >= 2) {
+      playVideo();
+    } else {
+      heroVideo.addEventListener('canplay', playVideo, { once: true });
+      heroVideo.addEventListener('loadeddata', playVideo, { once: true });
+    }
+  }
 });

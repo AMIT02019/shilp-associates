@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="assets/styles.css">
+<link rel="preload" as="image" href="assets/hero-video-poster.jpg" fetchpriority="high">
+<link rel="preload" as="video" href="assets/hero-bg.mp4" type="video/mp4">
 </head>
 <body>
 
@@ -75,7 +77,7 @@
 <section class="hero" id="hero">
   <!-- Autoplay Video Background -->
   <div class="hero-video-bg">
-    <video autoplay loop muted playsinline poster="assets/hero-bg.png" class="hero-video-element">
+    <video autoplay loop muted playsinline preload="auto" poster="assets/hero-video-poster.jpg" id="heroVideo" class="hero-video-element">
       <source src="assets/hero-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
