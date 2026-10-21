@@ -809,7 +809,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width: 1140px;
+  width: 100%;
   margin: 36px auto 0;
 }
 @media (max-width: 960px) {
