@@ -12,7 +12,7 @@
 <style>
   :root{ --page-hero-img: url('assets/about-hero-bg.jpg'); }
   .page-hero {
-    background: linear-gradient(180deg, rgba(5, 20, 38, 0.08) 0%, rgba(5, 20, 38, 0.20) 50%, rgba(5, 20, 38, 0.38) 100%) 0%, rgba(5, 20, 38, 0.58) 100%), url('assets/about-hero-bg.jpg') no-repeat center bottom / cover !important;
+    background: linear-gradient(180deg, rgba(5, 20, 38, 0.10) 0%, rgba(5, 20, 38, 0.22) 50%, rgba(5, 20, 38, 0.40) 100%), url('assets/about-hero-bg.jpg') no-repeat center center / cover !important;
   }
 </style>
 </head>
@@ -87,8 +87,8 @@
 <!-- COMPANY OVERVIEW -->
 <section class="content-section overview-section reveal" id="overview">
   <div class="wrap overview-wrap">
-    <div class="overview-bg-blueprint" style="background-image: url('assets/story-bg.png');" aria-hidden="true"></div>
     <div class="overview-content-grid">
+      <!-- Left Column: Story Narrative -->
       <div class="overview-text-col">
         <span class="eyebrow-sm">Company Overview</span>
         <h2 class="h2 h2--sub">Designing Spaces. Building Trust. Shaping Tomorrow.</h2>
@@ -96,21 +96,36 @@
         <p class="lead-text">Our practice is built on the belief that exceptional architecture is measured by the value it creates — for the people who live and work in it, and for the client who commissions it. We embed regulatory compliance and statutory approval strategy into the design process from day one, so projects move faster, cost less to build, and still deliver on design excellence.</p>
         <p class="founder-line">Founder — <a href="https://www.linkedin.com/in/nikhil-dikshit-53994839/" target="_blank" rel="noopener"><strong>Nikhil Dikshit</strong></a></p>
       </div>
-      <div class="overview-stats-col">
-        <div class="overview-stats-card">
-          <div class="overview-stat-item">
-            <h3 class="counter-number" data-target="40">0</h3>
-            <p>Years of Experience</p>
-          </div>
-          <div class="overview-stat-item">
-            <h3 class="counter-number" data-target="500">0</h3>
-            <p>Projects Delivered</p>
-          </div>
-          <div class="overview-stat-item">
-            <h3 class="counter-number" data-target="100">0</h3>
-            <p>Happy Clients</p>
-          </div>
+
+      <!-- Right Column: Architectural Blueprint Showcase -->
+      <div class="overview-visual-col">
+        <div class="overview-blueprint-frame">
+          <img src="assets/story-bg.png" alt="Bandra-Worli Sea Link &amp; Mumbai Skyline Architectural Blueprint" class="overview-blueprint-img" width="1400" height="620">
         </div>
+      </div>
+    </div>
+
+    <!-- Bottom Row: Clean Properly Aligned Metrics Bar -->
+    <div class="overview-metrics-bar">
+      <div class="overview-metric-item">
+        <div class="metric-number-wrap">
+          <h3 class="counter-number" data-target="40">0</h3>
+        </div>
+        <p class="metric-label">Years of Experience</p>
+      </div>
+      <div class="overview-metric-divider"></div>
+      <div class="overview-metric-item">
+        <div class="metric-number-wrap">
+          <h3 class="counter-number" data-target="500">0</h3>
+        </div>
+        <p class="metric-label">Projects Delivered</p>
+      </div>
+      <div class="overview-metric-divider"></div>
+      <div class="overview-metric-item">
+        <div class="metric-number-wrap">
+          <h3 class="counter-number" data-target="100">0</h3>
+        </div>
+        <p class="metric-label">Happy Clients</p>
       </div>
     </div>
   </div>
