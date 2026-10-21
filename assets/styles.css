@@ -803,6 +803,130 @@ h1, h2, h3, h4, h5, h6 {
 .faq-answer p { padding: 0 0 22px; color: var(--clr-muted); font-size: .98rem; font-family: var(--font-body); line-height: 1.65; max-width: 720px; }
 
 /* ==========================================================================
+   ABOUT PAGE - COMPANY OVERVIEW WITH ARCHITECTURAL BLUEPRINT BACKGROUND
+   ========================================================================== */
+.overview-section {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding: 96px 0;
+}
+.overview-wrap {
+  position: relative;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.overview-bg-blueprint {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  width: 54%;
+  max-width: 780px;
+  height: 94%;
+  max-height: 520px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.90;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 10%, rgba(0, 0, 0, 0.85) 32%, rgba(0, 0, 0, 1) 100%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.20) 10%, rgba(0, 0, 0, 0.85) 32%, rgba(0, 0, 0, 1) 100%);
+}
+.overview-content-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
+}
+.overview-text-col {
+  display: flex;
+  flex-direction: column;
+}
+.overview-stats-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100%;
+}
+.overview-stats-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(5, 38, 77, 0.10);
+  border-radius: 12px;
+  padding: 24px 18px;
+  box-shadow: 0 10px 30px rgba(5, 38, 77, 0.05);
+  text-align: center;
+}
+.overview-stat-item h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.overview-stat-item p {
+  color: var(--clr-muted);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+}
+.founder-line {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-navy);
+  margin-top: 14px;
+}
+.founder-line a {
+  color: var(--color-navy-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+.founder-line a:hover {
+  color: var(--color-gold);
+}
+@media (max-width: 960px) {
+  .overview-bg-blueprint {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: none;
+    opacity: 0.16;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .overview-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .overview-stats-col {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .overview-section { padding: 64px 0; }
+  .overview-stats-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+}
+
+/* ==========================================================================
    FOUNDERS & EXECUTIVE LEADERSHIP CARDS
    ========================================================================== */
 .founders-grid {
