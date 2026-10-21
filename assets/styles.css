@@ -2384,3 +2384,372 @@ body.nav-locked {
     padding-left: 20px !important;
   }
 }
+
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE PHONE OPTIMIZATIONS (<= 768px & <= 480px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Wrap container padding */
+  .wrap {
+    padding-inline: 20px;
+  }
+
+  /* Section vertical spacing */
+  .section-std, 
+  .content-section,
+  .expertise-section, 
+  .insights-section,
+  .split-feature-section,
+  .about-section {
+    padding-block: 56px;
+  }
+
+  /* Clients infinite scroller reset to prevent 100vw horizontal overflow */
+  .clients-section {
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 48px 0;
+  }
+  .clients-section .h2 {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    padding-inline: 16px;
+  }
+
+  /* Header on tablet/mobile */
+  .site-header {
+    width: calc(100% - 24px);
+    top: 10px;
+    border-radius: 36px;
+  }
+  .site-header .wrap {
+    padding-inline: 16px;
+    padding-block: 8px;
+  }
+  .site-logo img {
+    height: 36px;
+  }
+
+  /* Homepage Hero */
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+  .hero .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .hero-copy {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .hero-copy .h1 {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .hero-copy .body-text {
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+  .button-con {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    margin-block-start: 1.5rem;
+  }
+  .button-con .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+  .metrics-container {
+    width: 100%;
+    max-width: 100%;
+    align-items: stretch;
+    margin-top: 8px;
+    gap: 12px;
+  }
+  .metric-card {
+    width: 100%;
+    padding: 14px 18px;
+  }
+  .bdt-scroll-down-btn {
+    display: none !important;
+  }
+
+  /* Page Hero Banners (Inner Pages) */
+  .page-hero {
+    min-height: auto;
+    padding: 130px 20px 55px;
+  }
+  .page-hero .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.85rem, 6.5vw, 2.6rem);
+    line-height: 1.2;
+    padding-inline: 8px;
+  }
+  .page-hero p {
+    font-size: 1.02rem;
+    line-height: 1.55;
+    margin-top: 14px;
+    padding-inline: 8px;
+  }
+  .breadcrumb {
+    font-size: 0.8rem;
+    margin-top: 14px;
+  }
+
+  /* Story section on homepage */
+  .story-daisaria-section {
+    padding: 56px 0;
+  }
+  .story-main-img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-height: 320px;
+  }
+  .story-badge-floating {
+    padding: 12px 18px;
+    bottom: -16px;
+    right: 14px;
+  }
+  .story-badge-years {
+    font-size: 1.8rem;
+  }
+  .story-badge-text {
+    font-size: 0.72rem;
+  }
+  .story-content-side {
+    margin-top: 24px;
+  }
+
+  /* Testimonials */
+  .arch-tstm-slide-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .arch-tstm-quote-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+  .arch-tstm-text {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .arch-tstm-controls-group {
+    padding-left: 0;
+    justify-content: center;
+    margin-top: 24px;
+    gap: 20px;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    min-height: auto;
+    padding: 64px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #1F4160 0%, #0d2338 100%);
+  }
+  .cta-section .h2 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+    margin: 0 auto;
+  }
+  .cta-section .button-con {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Pune Page */
+  .pune-hero-split {
+    min-height: auto;
+    padding: 125px 0 55px;
+  }
+  .pune-hero-title {
+    font-size: clamp(1.85rem, 6.5vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .pune-hero-lead {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .pune-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .pune-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .blueprint-stat-box {
+    padding: 22px 18px;
+    gap: 20px 14px;
+    margin-top: 12px;
+  }
+  .stat-item h3 {
+    font-size: 1.85rem;
+  }
+
+  /* Contact page */
+  .contact-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .contact-info-item {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    padding: 12px 14px;
+  }
+  .contact-form .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 540px) {
+  .wrap {
+    padding-inline: 16px;
+  }
+
+  /* 6-Counter Stats Grid: 2 columns on phones */
+  .stats-grid-6 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 14px !important;
+  }
+  .stat-box-num {
+    font-size: 2.1rem !important;
+  }
+  .stat-box-line {
+    margin: 8px 0 10px !important;
+  }
+  .stat-box-label {
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Portfolio Grid */
+  .filter-bar {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .filter-btn {
+    padding: 8px 12px;
+    font-size: 0.76rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .portfolio-card {
+    aspect-ratio: 16 / 11;
+  }
+
+  /* Pune Bento Grid */
+  .pune-filter-bar {
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .pune-filter-btn {
+    padding: 8px 12px;
+    font-size: 0.76rem;
+  }
+  .bento-card {
+    padding: 18px 16px;
+  }
+  .bento-metrics {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .bento-stat-num {
+    font-size: 1.05rem;
+  }
+
+  /* About Page Founders & Team */
+  .founders-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 20px auto 0;
+  }
+  .founder-photo-wrap {
+    aspect-ratio: 3 / 3.4;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 12px !important;
+  }
+  .team-photo {
+    margin-bottom: 10px;
+  }
+  .team-name {
+    font-size: 0.92rem;
+  }
+  .team-role {
+    font-size: 0.72rem;
+  }
+  .team-bio {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  /* Header compact on extra small screens */
+  .site-header {
+    width: calc(100% - 16px);
+    top: 6px;
+    border-radius: 28px;
+  }
+  .site-header .wrap {
+    padding-inline: 12px;
+    padding-block: 6px;
+  }
+  .site-logo img {
+    height: 32px;
+  }
+  .main-nav {
+    padding: 75px 20px 30px;
+  }
+  .main-nav a {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .team-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 240px;
+    margin: 16px auto 0;
+  }
+  .stats-grid-6 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
