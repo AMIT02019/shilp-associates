@@ -3,16 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
-<title>Contact | Shilp Associates</title>
-<meta name="description" content="Get in touch with Shilp Associates to discuss your architecture, liaison, PMC or interior design project.">
+<title>Contact & Project Registration | Shilp Associates Mumbai & Pune</title>
+<meta name="description" content="Register your redevelopment or architectural project with Shilp Associates. 40+ years of architectural excellence, liaisoning, PMC and interior design across Maharashtra.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
   :root{ --page-hero-img: url('assets/hero-bg.png'); }
   .page-hero {
     background: linear-gradient(180deg, rgba(5, 20, 38, 0.40) 0%, rgba(5, 20, 38, 0.28) 45%, rgba(5, 20, 38, 0.58) 100%), url('assets/hero-bg.png') no-repeat center center / cover !important;
+  }
+  .contact-page-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 56px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .contact-page-layout { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .office-card {
+    background: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(15, 34, 54, 0.04);
+  }
+  .office-card h4 {
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .office-card h4 i { color: var(--color-gold); font-size: 1rem; }
+  .office-detail-line {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+    color: var(--clr-muted);
+    line-height: 1.5;
+  }
+  .office-detail-line i {
+    color: var(--color-navy);
+    margin-top: 4px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .office-detail-line a {
+    color: var(--color-navy);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .office-detail-line a:hover {
+    color: var(--color-gold);
+    text-decoration: underline;
+  }
+  .contact-form-card {
+    background: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(15, 34, 54, 0.06);
+  }
+  @media (max-width: 600px) {
+    .contact-form-card { padding: 24px 18px; }
+  }
+  .social-connect-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .social-connect-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--clr-bg-alt);
+    border: 1px solid var(--clr-border);
+    color: var(--color-navy);
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .social-connect-btn:hover {
+    background: var(--color-navy);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 34, 54, 0.15);
   }
 </style>
 </head>
@@ -32,9 +120,10 @@
             <button class="dropdown-trigger-btn" aria-label="Toggle About Submenu"><i class="fa-solid fa-chevron-down nav-dropdown-icon"></i></button>
           </div>
           <ul class="dropdown-menu">
-            <li><a href="about.html">Our 40+ Yr Legacy</a></li>
-            <li><a href="about.html#team">Leadership &amp; Team</a></li>
-            <li><a href="pune.html">Pune Regional Office</a></li>
+            <li><a href="about.html#story">Our Story &amp; Leadership</a></li>
+            <li><a href="about.html#philosophy">Design Philosophy</a></li>
+            <li><a href="about.html#leadership">Leadership Team</a></li>
+            <li><a href="about.html#milestones">Legacy Milestones</a></li>
           </ul>
         </li>
         <li class="has-dropdown">
@@ -44,9 +133,10 @@
           </div>
           <ul class="dropdown-menu">
             <li><a href="architectural-design.html">Architectural Design</a></li>
-            <li><a href="liaison.html">Liaison Services</a></li>
+            <li><a href="liaison.html">Liaison Services (Approvals)</a></li>
             <li><a href="pmc.html">Project Management Consultancy (PMC)</a></li>
-            <li><a href="interior-design.html">Interior Design</a></li>
+            <li><a href="interior-design.html">Interior Architecture</a></li>
+            <li><a href="liaison.html#due-diligence">Due Diligence &amp; Feasibility</a></li>
           </ul>
         </li>
         <li class="has-dropdown">
@@ -69,111 +159,264 @@
       </ul>
     </nav>
     <div class="header-right-actions">
-      <a href="contact.html" class="header-cta">Book a Consultation</a>
+      <a href="contact.html" class="header-cta">Project Enquiry</a>
       <button class="nav-toggle" aria-label="Toggle Navigation"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <section class="page-hero">
-  <div>
-    <span class="eyebrow">Get In Touch</span>
-    <h1>Let's Talk About Your Project</h1>
-    <p>Whether it's a redevelopment, a new build, or an interior fit-out — tell us what you're planning.</p>
-    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+  <div class="wrap">
+    <div class="eyebrow">GET IN TOUCH • PAN-MAHARASHTRA PRACTICE</div>
+    <h1>Tell Us About Your Project</h1>
+    <p>Whether you represent a Cooperative Housing Society seeking redevelopment, a Developer requiring master layout &amp; liaisoning, or an institution planning a landmark structure — register your project with Shilp Associates.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &gt; Contact &amp; Project Enquiry</div>
   </div>
 </section>
 
 <section class="content-section reveal">
-  <div class="wrap contact-wrap">
+  <div class="wrap contact-page-layout">
+    
+    <!-- Left Column: Official Contact & Offices -->
     <div>
-      <span class="eyebrow-sm">Contact Details</span>
-      <h2 class="h2 h2--sub">Reach Out to Shilp Associates</h2>
+      <span class="eyebrow-sm">DIRECT ENGAGEMENT</span>
+      <h2 class="h2 h2--sub" style="margin-bottom: 24px;">Our Offices &amp; Practice Locations</h2>
+      
+      <!-- Mumbai Head Office -->
+      <div class="office-card">
+        <h4><i class="fa-solid fa-building"></i> Mumbai Head Office</h4>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>3rd Floor, 315 to 317, E-Square, Subhash Road, Above SBI Bank Building, Vile Parle (East), Mumbai – 400 057, Maharashtra, India.</span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-phone"></i>
+          <span><a href="tel:02246168884">022 46168884</a> / <a href="tel:02226102463">022 26102463</a> / <a href="tel:02226102464">64</a></span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span><a href="https://wa.me/919324464533" target="_blank" rel="noopener">+91 93244 64533</a></span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-envelope"></i>
+          <span><a href="mailto:info@shilpassociates.com">info@shilpassociates.com</a></span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-clock"></i>
+          <span>Monday – Saturday: 10:30 AM to 6:30 PM</span>
+        </div>
+      </div>
 
-      <div class="contact-info-item">
-        <i class="fa-solid fa-user-tie"></i>
-        <div>
-          <h4>Founder</h4>
-          <a href="https://www.linkedin.com/in/nikhil-dikshit-53994839/" target="_blank" rel="noopener">Nikhil Dikshit — LinkedIn</a>
+      <!-- Pune Branch Office -->
+      <div class="office-card">
+        <h4><i class="fa-solid fa-city"></i> Pune Branch Office</h4>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Shilp Architects, 307, Seasons Business Square, 128/2 Seasons Road, Sanewadi, Aundh, Pune – 411 007, Maharashtra, India.</span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-phone"></i>
+          <span><a href="tel:+919324450397">+91 93244 50397</a></span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-envelope"></i>
+          <span><a href="mailto:infopune@shilpassociates.com">infopune@shilpassociates.com</a></span>
+        </div>
+        <div class="office-detail-line">
+          <i class="fa-solid fa-clock"></i>
+          <span>Monday – Saturday: 10:30 AM to 6:30 PM</span>
         </div>
       </div>
-      <div class="contact-info-item">
-        <i class="fa-solid fa-diagram-project"></i>
-        <div>
-          <h4>Services</h4>
-          <p>Liaison · Project Management Consultancy (PMC) · Architectural Design · Interior Design</p>
+
+      <!-- Service Coverage -->
+      <div class="office-card">
+        <h4><i class="fa-solid fa-map-location-dot"></i> Practice Coverage</h4>
+        <p style="font-size: 0.92rem; color: var(--clr-muted); line-height: 1.6; margin-bottom: 12px;">
+          <strong>Comprehensive Coverage Across Maharashtra:</strong> Mumbai Metropolitan Region (MMR — Island City, Western &amp; Eastern Suburbs, Thane, Navi Mumbai), Pune &amp; Pimpri-Chinchwad (PCMC), Nashik, Chhatrapati Sambhajinagar, and regional urban hubs under Unified DCPR (UDCPR).
+        </p>
+        <p style="font-size: 0.88rem; color: var(--color-navy); font-weight: 600;">
+          Grade-I Panel Registered: MHADA (Mumbai &amp; Pune Boards) &amp; Municipal Corporations (MCGM / PMC / PCMC).
+        </p>
+      </div>
+
+      <!-- Official Social Links -->
+      <div style="margin-top: 24px;">
+        <span class="eyebrow-sm" style="margin-bottom: 8px;">CONNECT ON SOCIAL NETWORKS</span>
+        <div class="social-connect-bar">
+          <a href="https://www.linkedin.com/company/shilp-associates-mumbai/" target="_blank" rel="noopener" class="social-connect-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/shilp_associates_architects/" target="_blank" rel="noopener" class="social-connect-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/shilpassociates/" target="_blank" rel="noopener" class="social-connect-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919324464533" target="_blank" rel="noopener" class="social-connect-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/@shilpassociates" target="_blank" rel="noopener" class="social-connect-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
-      <div class="contact-info-item">
-        <i class="fa-solid fa-location-dot"></i>
-        <div>
-          <h4>Serving</h4>
-          <p>Mumbai &amp; Pune</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <i class="fa-solid fa-clock"></i>
-        <div>
-          <h4>Response Time</h4>
-          <p>We typically respond to consultation requests within 1–2 business days.</p>
-        </div>
-      </div>
+
     </div>
 
-    <div>
-      <span class="eyebrow-sm">Book a Consultation</span>
-      <h2 class="h2 h2--sub">Send Us a Message</h2>
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you — this form is a static preview and is not yet connected. Please share your email/phone hookup details to enable submissions.');">
-        <div>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+    <!-- Right Column: Project Enquiry & Registration Form -->
+    <div class="contact-form-card">
+      <span class="eyebrow-sm">PROJECT ENQUIRY &amp; SOCIETY REGISTRATION</span>
+      <h2 class="h2 h2--sub" style="margin-bottom: 12px;">Tell Us About Your Project</h2>
+      <p style="color: var(--clr-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 28px;">
+        Please share your project details, location, and the nature of assistance required. Our leadership and technical team will evaluate your query and connect within 1–2 business days.
+      </p>
+
+      <form class="contact-form-grid" onsubmit="event.preventDefault(); alert('Thank you for registering your project enquiry with Shilp Associates. Our team will review the details and reach out within 1 business day.');">
+        
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Rajesh Sharma" required>
         </div>
-        <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
+
+        <div class="form-group">
+          <label for="contactNumber">Phone / WhatsApp Number *</label>
+          <input type="tel" id="contactNumber" name="contactNumber" placeholder="e.g. +91 98200 00000" required>
         </div>
-        <div>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
+
+        <div class="form-group">
+          <label for="emailAddress">Email Address *</label>
+          <input type="email" id="emailAddress" name="emailAddress" placeholder="e.g. contact@domain.com" required>
         </div>
-        <div>
-          <label for="service">Service Interested In</label>
-          <select id="service" name="service">
-            <option>Liaison Services</option>
-            <option>Project Management Consultancy (PMC)</option>
-            <option>Architectural Design</option>
-            <option>Interior Design</option>
-            <option>Other / Not Sure</option>
+
+        <div class="form-group">
+          <label for="visitorRole">I Am A / Purpose *</label>
+          <select id="visitorRole" name="visitorRole" required>
+            <option value="" disabled selected>Select Your Role / Purpose</option>
+            <option value="committee">Housing Society Managing Committee Member</option>
+            <option value="resident">Society Member / Resident</option>
+            <option value="developer">Real Estate Developer / Builder</option>
+            <option value="landowner">Landowner / Property Owner</option>
+            <option value="corporate">Corporate / Commercial Entity</option>
+            <option value="individual">Individual Homeowner (Interior / Architecture)</option>
           </select>
         </div>
-        <div>
-          <label for="message">Tell Us About Your Project</label>
-          <textarea id="message" name="message" required></textarea>
+
+        <div class="form-group">
+          <label for="serviceRequired">Primary Service Required *</label>
+          <select id="serviceRequired" name="serviceRequired" required>
+            <option value="" disabled selected>Select Primary Service</option>
+            <option value="redevelopment">Society Redevelopment (Self / Developer)</option>
+            <option value="pmc">Project Management Consultancy (PMC Concept to Handover)</option>
+            <option value="architecture">Architectural Planning &amp; Master Layout</option>
+            <option value="liaison">Municipal &amp; Statutory Liaisoning (BMC/PMC/MHADA)</option>
+            <option value="interior">Turnkey Interior Architecture &amp; Fit-Outs</option>
+            <option value="feasibility">Feasibility Study, Valuation &amp; FSI Report</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit Enquiry <span class="btn-arrow">→</span></button>
+
+        <div class="form-group">
+          <label for="projectLocation">Project Region in Maharashtra *</label>
+          <select id="projectLocation" name="projectLocation" required>
+            <option value="" disabled selected>Select Region</option>
+            <option value="mumbai-western">Mumbai — Western Suburbs</option>
+            <option value="mumbai-eastern">Mumbai — Eastern Suburbs</option>
+            <option value="mumbai-city">Mumbai — Island City / South Mumbai</option>
+            <option value="thane-navimumbai">Thane &amp; Navi Mumbai (MMR)</option>
+            <option value="pune-pcmc">Pune City &amp; Pimpri-Chinchwad (PCMC)</option>
+            <option value="other-maharashtra">Other Cities Across Maharashtra</option>
+          </select>
+        </div>
+
+        <div class="form-group contact-form-full">
+          <label for="societyName">Society / Project Name &amp; Approx. Plot Area (Optional)</label>
+          <input type="text" id="societyName" name="societyName" placeholder="e.g. Nav-Kiran CHSL, Bandra East — approx. 2,400 sq.m (or number of flats)">
+          <span class="form-help-text">Providing Society Name and Plot size helps us review relevant DCPR / UDCPR regulations prior to contacting you.</span>
+        </div>
+
+        <div class="form-group contact-form-full">
+          <label for="projectOverview">Tell Us About Your Project &amp; Current Stage *</label>
+          <textarea id="projectOverview" name="projectOverview" rows="4" placeholder="Briefly describe your requirements, current stage (e.g. initial society discussion, tender preparation, seeking municipal approvals, or interior requirements)..." required></textarea>
+        </div>
+
+        <div class="contact-form-full" style="margin-top: 10px;">
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 15px 32px; font-size: 1rem;">
+            Register Project &amp; Submit Enquiry <span class="btn-arrow">→</span>
+          </button>
+          <p style="font-size: 0.8rem; color: #888; text-align: center; margin-top: 12px;">
+            <i class="fa-solid fa-lock" style="margin-right: 4px;"></i> Your details are strictly confidential and will never be shared with third parties.
+          </p>
+        </div>
+
       </form>
     </div>
+
   </div>
 </section>
 
+<!-- ============================== FOOTER (DAISARIA AESTHETIC GRID) ============================== -->
 <footer class="site-footer">
-  <div class="footer-logo"><a href="index.html"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a></div>
-  <nav class="footer-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="pune.html">Pune</a></li>
-      <li><a href="liaison.html">Liaison</a></li>
-      <li><a href="pmc.html">Project Management Consultancy (PMC)</a></li>
-      <li><a href="architectural-design.html">Architectural Design</a></li>
-      <li><a href="interior-design.html">Interior Design</a></li>
-      <li><a href="portfolio.html">Projects</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="careers.html">Career</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="footer-bottom"><p>© 2026 Shilp Associates. All Rights Reserved.</p></div>
+  <div class="wrap footer-content-wrap">
+    <div class="footer-top-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-col-brand">
+        <div class="footer-logo"><a href="index.html"><img src="assets/logo-shilp.png" alt="Shilp Associates"></a></div>
+        <p class="footer-brand-desc">
+          Established in 1984, Shilp Associates is a premier multidisciplinary architectural practice specializing in Strategic Architectural Design, Municipal &amp; Statutory Liaisoning, Project Management Consultancy (PMC), and Turnkey Interior Architecture across Mumbai, Pune, and growth hubs throughout Maharashtra.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/company/shilp-associates-mumbai/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/shilp_associates_architects/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/shilpassociates/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919324464533" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.youtube.com/@shilpassociates" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <!-- Col 2: Services -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Services</h4>
+        <ul>
+          <li><a href="architectural-design.html">Architectural Design</a></li>
+          <li><a href="liaison.html">Liaisoning &amp; Approvals</a></li>
+          <li><a href="pmc.html">Project Management Consultancy (PMC)</a></li>
+          <li><a href="interior-design.html">Interior Architecture</a></li>
+          <li><a href="liaison.html#due-diligence">Due Diligence &amp; Feasibility</a></li>
+          <li><a href="portfolio.html?filter=mhada">MHADA Layout Redevelopment</a></li>
+          <li><a href="index.html#foreign-collaborations">Foreign Collaborations</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Quick Links -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Our Legacy</a></li>
+          <li><a href="pune.html">Pune Office</a></li>
+          <li><a href="portfolio.html">Projects Portfolio</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Project Enquiry</a></li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact Offices -->
+      <div class="footer-col-links">
+        <h4 class="footer-col-title">Offices</h4>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong style="color:#fff;">Mumbai Head Office:</strong><br>
+            3rd Floor, 315–317, E-Square, Subhash Road, Above SBI Bank, Vile Parle (E), Mumbai – 400 057<br>
+            Tel: <a href="tel:02246168884">022 46168884</a> | Mob: <a href="tel:+919324464533">+91 93244 64533</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong style="color:#fff;">Pune Branch Office:</strong><br>
+            Shilp Architects, 307, Seasons Business Square, 128/2 Seasons Rd, Sanewadi, Aundh, Pune – 411 007<br>
+            Mob: <a href="tel:+919324450397">+91 93244 50397</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            Email: <a href="mailto:info@shilpassociates.com">info@shilpassociates.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Shilp Associates. All Rights Reserved. Strategic Architectural Design, Liaisoning &amp; PMC across Maharashtra.</p>
+    </div>
+  </div>
 </footer>
 
 <script src="assets/main.js"></script>
