@@ -3017,3 +3017,132 @@ body.nav-locked {
   color: #7b756d;
   margin-top: 4px;
 }
+
+
+/* ==========================================================================
+   AUTHENTIC CLIENT ROSTER & CATEGORIES (from shilpassociates.com)
+   ========================================================================== */
+.client-category-block {
+  margin-bottom: 56px;
+}
+.client-category-block:last-child {
+  margin-bottom: 24px;
+}
+
+.client-category-title {
+  font-family: var(--font-heading, 'Cinzel', serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-navy, #0f2236);
+  text-align: center;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+.client-category-title .title-accent {
+  color: #1a4d8c;
+}
+
+.client-title-bar {
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(90deg, #c5a059, #dfba73);
+  margin: 0 auto 36px auto;
+  border-radius: 2px;
+}
+
+.clients-roster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.clients-roster-grid.grid-center-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.client-roster-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 34, 54, 0.08);
+  border-radius: 12px;
+  padding: 20px 24px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.client-roster-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 34, 54, 0.12);
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+.client-roster-card img {
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.client-roster-card:hover img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 1024px) {
+  .clients-roster-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .clients-roster-grid.grid-center-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .client-category-title {
+    font-size: 1.45rem;
+    padding: 0 12px;
+  }
+  .client-title-bar {
+    margin-bottom: 24px;
+  }
+  .clients-roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .clients-roster-grid.grid-center-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client-roster-card {
+    height: 100px;
+    padding: 14px 16px;
+  }
+  .client-roster-card img {
+    max-height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .clients-roster-grid.grid-center-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client-roster-card {
+    height: 90px;
+    padding: 12px 14px;
+  }
+  .client-roster-card img {
+    max-height: 48px;
+  }
+}
+
